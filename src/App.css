@@ -1,38 +1,472 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: #3e3d3d;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Home Page Styles */
+.home-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.main-content {
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.main-content h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.explore-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+}
+
+.explore-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent;
+  z-index: 100;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.8s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+  font-size: 1rem;
+  text-decoration: underline;
+  
+
+}
+
+.nav-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-icon span {
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Page Container */
+.page-container {
+  min-height: 100vh;
+  background: #434343;
+  /* border: 2px solid red; */
+}
+
+.page-content {
+  padding: 100px 2rem 2rem;
+  /* border: 2px solid blue; */
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  /* border: 2px solid green; */
+}
+
+.section-header h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #171616;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #efe8e8;
+  font-style: italic;
+}
+
+/* Collection Page */
+.watches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.watch-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.watch-card:hover {
+  transform: translateY(-10px);
+}
+
+.watch-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.watch-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.watch-card:hover .watch-image img {
+  transform: scale(1.10);
+}
+
+.watch-era {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.watch-details {
+  padding: 1.5rem;
+}
+
+.watch-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.watch-details p {
+  color: #393838;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.view-details-btn {
+  background: transparent;
+  color: #333;
+  border: 1px solid #333;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.view-details-btn:hover {
+  background: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* History Page */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ddd;
+  transform: translateX(-50%);
+}
+
+.timeline-event {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-event:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-year {
+  flex: 1;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #0a0909;
+}
+
+.timeline-event:nth-child(odd) .timeline-year {
+  justify-content: flex-end;
+}
+
+.timeline-event:nth-child(even) .timeline-year {
+  justify-content: flex-start;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.timeline-event:nth-child(even) .timeline-content {
+  text-align: right;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: rgb(1, 0, 0);
+  text-shadow: 20%;
+  
+}
+
+.timeline-content p {
+  color: #ebe8e8;
+  line-height: 1.6;
+}
+
+/* Contact Page */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2, .contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.opening-hours {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.opening-hours h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.3s;
+    padding-top: 80px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    padding: 1.5rem;
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .nav-icon {
+    display: flex;
+  }
+
+  .main-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-event, .timeline-event:nth-child(even) {
+    flex-direction: column;
+    margin-left: 60px;
+  }
+  
+  .timeline-year {
+    justify-content: flex-start !important;
+    padding: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .timeline-content, .timeline-event:nth-child(even) .timeline-content {
+    text-align: left;
+    padding: 0;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h1 {
+    font-size: 2rem;
+  }
+  
+  .watches-grid {
+    grid-template-columns: 1fr;
   }
 }
