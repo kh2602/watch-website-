@@ -40,7 +40,7 @@ const Navbar = () => {
 const Home = () => {
   return (
     <div className="home-container">
-      <video autoPlay loop className="background-video">
+      <video autoPlay muted loop className="background-video">
        <source src={myVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -54,7 +54,9 @@ const Home = () => {
           <button className="explore-btn" onClick={() => window.location.href = '/collection'}>Explore the Collection</button>
         </div>
       </div>
+      <div>hellloo</div>
     </div>
+   
   );
 };
 
@@ -84,6 +86,63 @@ const Collection = () => {
     },
     {
       id: 4,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+      id: 5,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 6,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 7,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 8,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 9,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 10,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 11,
+      name: "Aquanaut",
+      era: "1990s",
+      description: "A modern interpretation of the sports watch with tropical strap",
+      image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 12,
       name: "Aquanaut",
       era: "1990s",
       description: "A modern interpretation of the sports watch with tropical strap",
