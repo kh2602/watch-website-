@@ -16,6 +16,61 @@ body {
 }
 
 /* Home Page Styles */
+
+.home-page{
+  height: 500vh;
+  /* border: 2px solid red ; */
+}
+.one{
+  /* border: 2px solid green; */
+  height: 15vh;
+  display: flex;
+  justify-content:center;
+  align-items: flex-end;
+}
+.main-part{
+  height: 60vh;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  justify-self: center;
+  text-align: justify;
+  flex-direction: column;
+}
+.main-one{
+  height: 80vh;
+  width: 80%;
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ justify-self: center;
+}
+.home-content-1{
+  height: 50vh;
+  /* border: 2px solid blue; */
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  flex-direction: column;
+}
+.home-image-1{
+  height: 60vh;
+  /* border: 2px solid blue; */
+  width: 45%;
+}
+.img-1{
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+.header1{
+color: rgb(85, 66, 40);
+}
 .home-container {
   position: relative;
   height: 100vh;
